@@ -1,0 +1,113 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-container input, .input-container select, .input-container button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid white;
+    flex: 1 1 45%;
+}
+
+.input-container button {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: red;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-task, #filter-priority {
+    flex: 1 1 48%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid transparent;
+    transition: background-color 0.3s;
+}
+
+li[data-priority="High"] {
+    border-left-color: red;
+}
+
+li[data-priority="Medium"] {
+    border-left-color: orange;
+}
+
+li[data-priority="Low"] {
+    border-left-color: red;
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: white;
+}
+
+.delete-button {
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e60000;
+}
